@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8;
 
-contract RomanToInt{
+contract RomanToNumber{
 
     mapping (string=>uint256) private romanTable;
     constructor() {
@@ -14,7 +14,7 @@ contract RomanToInt{
         romanTable["M"] = 1000;
     }
 
-    function RomanToInt1(string memory str) public view returns(uint256){
+    function RomanToInt(string memory str) public view returns(uint256){
         bytes memory romanBytes = bytes(str);
         uint256 result = 0;
         for(uint i=0; i<romanBytes.length; i++) {
